@@ -1,0 +1,257 @@
+:root {
+    --dee-bg: hsl(215, 9%, 13%);
+    --dee-fg: hsl(140, 6%, 70%);
+
+    --dft-10: hsl(290, 16%, 45%);
+    --dft-20: hsl(288, 21%, 53%);
+    --dft-30: hsl(286, 26%, 62%);
+    --dft-40: var(--red-bg);
+}
+
+:root {
+	--dft-bg: hsl(214, 9%, 15%);
+	--dft-fg: hsl(143, 6%, 75%);
+
+    --dee-bg: hsl(215, 9%, 13%);
+    --dee-fg: hsl(140, 6%, 70%);
+
+	--blk-bg: #2b2e31;
+	--blk-fg: #b0b5b1;
+
+    --red-bg: hsl(0, 50%, 53%);
+    --red-fg: hsl(0, 40%, 61%);
+
+	--grn-bg: hsl(70, 40%, 42%);
+	--grn-fg: hsl(66, 35%, 57%);
+
+    --yel-bg: hsl(35, 75%, 48%);
+	--yel-fg: hsl(40, 81%, 70%);
+
+	--blu-bg: hsl(212, 25%, 49%);
+	--blu-fg: hsl(208, 32%, 63%);
+
+	--mag-bg: hsl(290, 16%, 45%);
+	--mag-fg: hsl(286, 26%, 62%);
+
+	--cyn-bg: hsl(196, 35%, 39%);
+	--cyn-fg: hsl(191, 30%, 60%);
+
+	--wht-bg: hsl(210, 9%, 35%);
+	--wht-fg: hsl(140, 3%, 70%);
+}
+
+.theme-dark {
+    --background-modifier-form-field: var(--dft-bg);
+    --text-normal: var(--dft-fg);
+    --text-muted:  var(--wht-fg);
+    --text-faint:  var(--wht-bg);
+    --background-primary: var(--dft-bg);
+    --background-secondary: var(--dee-bg);
+
+    --titlebar-background-focused: var(--dee-bg);
+    --background-modifier-hover: var(--wht-bg);
+    --text-highlight-bg: hsla(30, 60%, 37%, 0.3);
+
+    --tag-radius: 0.5em 2em 2em 0.5em;
+    --font-serif: "HanziPen SC";
+    --font-sans: "Monaspace Neon", "FZFW Qing Yin Tis";
+    --font-style: "Monaspace Krypton", "Smiley Sans";
+
+    --code-white-space: pre-wrap;
+    /* --code-radius: var(--radius-s); */
+    /* --code-size: var(--font-smaller); */
+    /* --code-background: var(--background-primary-alt); */
+    --code-normal: var(--text-muted);
+    --code-punctuation: var(--text-muted);
+    --code-comment: var(--text-faint);
+    --code-background: var(--dee-bg);
+    --code-function: var(--red-bg);
+    --code-important: var(--yel-fg);
+    --code-keyword: var(--yel-bg);
+    --code-operator: var(--red-fg);
+    --code-property: var(--cyn-fg);
+    --code-string: var(--grn-fg);
+    --code-tag: var(--mag-bg);
+    --code-value: var(--mag-fg);
+}
+
+/*
+    editor
+ */
+
+.cm-editor {
+    --link-color: var(--red-fg);
+    --link-unresolved-color: var(--red-fg);
+    --link-color-hover: var(--yel-fg);
+    --link-unresolved-decoration-color: var(--red-bg);
+    --link-external-color: var(--blu-bg);
+    --link-external-color-hover: var(--blu-fg);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAK0lEQVR4nO3MwQ0AIACDwOqq3X8GXKL+IOF7aVsgqw+QZXeqCQoKCgr+Ax9AaD12Fyq9BwAAAABJRU5ErkJggg==");
+}
+
+/** 文字间距 */
+.cm-content {
+    letter-spacing: 0.02em;
+}
+
+/** editor 间距 **/
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+    padding: 8px 32px;
+}
+
+/* 改变插入符号（caret）的颜色 */
+.markdown-source-view.mod-cm6 .cm-content {
+    caret-color: var(--dft-fg);
+}
+
+/* title */
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+    padding-top: 0px;
+    font-family: var(--font-serif);
+}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-header:before {
+    position: relative;
+    bottom: 1px;
+    left: -2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: var(--font-monospace);
+    color: var(--text-muted);
+    font-size: .6rem;
+    font-style: normal;
+    line-height: 1em;
+}
+
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-1:before {content: "H1";}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-2:before {content: "H2";}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-3:before {content: "H3";}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-4:before {content: "H4";}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-5:before {content: "H5";}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-6:before {content: "H6";}
+
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-2 {
+    color: var(--mag-bg);
+}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-3 {
+    color: var(--grn-bg);
+}
+body:not(.no-lp-heading-level-indicator) .is-live-preview .cm-line:not(.cm-active)>.cm-header-4 {
+    color: var(--cyn-bg);
+}
+
+/** 高亮 */
+img.cm-widgetBuffer + .cm-highlight:not(.cm-formatting) {
+    border-radius: 9px 9px 9px 0;
+    padding: 4px 0.55rem;
+}
+
+.cm-line span.cm-highlight {
+    /* background-color: var(--org-bg); */
+    color: var(--yel-fg);
+}
+
+/* 粗体 */
+.cm-line span.cm-strong {
+    font-weight: 600;
+    color: var(--grn-fg);
+}
+
+/* 斜体 */
+.cm-line span.cm-em {
+    color: var(--blu-fg);
+    font-style: unset;
+    font-weight: 200;
+}
+
+/* 删除线 */
+.cm-line span.cm-strikethrough {
+    color: var(--wht-bg);
+}
+
+/* 脚注 */
+.cm-line span.cm-footref, .cm-hmd-footnote .cm-underline {
+    color: hsl(180, calc(75% * 0.3), 65%);
+}
+
+.cm-line:not(.HyperMD-footnote):has(+ .HyperMD-footnote) {
+/*     border-top: 2px solid var(--border-color);
+    padding-top: 8px;
+    margin-left: -3px !important; */
+    border-bottom: 2px solid  var(--text-muted);
+    border-left: 3px solid var(--background-primary);
+    border-right: 3px solid var(--background-primary);
+    margin-bottom: 6px !important;;
+}
+
+/* 行内代码 */
+img.cm-widgetBuffer + .cm-inline-code:not(.cm-formatting) {
+    border-radius: 3px;
+    font-family: var(--font-sans);
+}
+.cm-line span.cm-inline-code {
+    background-color: var(--blk-bg);
+    color: var(--blk-fg);
+    position: relative;
+    top: -1.5px;
+}
+
+/* 多行代码 */
+.cm-hmd-codeblock {
+    font-family: var(--font-sans);
+}
+
+/** 行内* 添加间距*/
+img.cm-widgetBuffer + .cm-hmd-internal-link,
+img.cm-widgetBuffer + .cm-highlight,
+img.cm-widgetBuffer + .cm-em,
+img.cm-widgetBuffer + .math:not(.math-block) {margin-right: 2px;}
+
+img.cm-widgetBuffer + .cm-strong,
+img.cm-widgetBuffer + .cm-strikethrough {margin: 0px;}
+
+/** 缩短列表的左边距 **/
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-list-line {
+	margin-left: -0.5em !important;
+}
+
+/** 给没文件的双链一点倾斜度 **/
+.cm-hmd-internal-link > .is-unresolved > .cm-underline {
+    font-style: italic;
+}
+
+/** 有文件的双链 位置上升一点 **/
+.cm-hmd-internal-link >  .cm-underline {
+    position: relative;
+    top: 0px;
+}
+
+/*
+    workspace
+ */
+
+/* 标签页标题间距 */
+.workspace-tab-header-inner-title {letter-spacing: 0.05em;}
+.nav-folder.mod-root > .nav-folder-title{
+    display: none;
+}
+
+/* 定义滚动条的样式 */
+/* WebKit（Chrome, Safari, Edge等） */
+::-webkit-scrollbar {
+    width: 4px; /* 滚动条宽度 */
+    height: 0px; /* 横向滚动条高度 */
+}
+/* 轨道 */
+::-webkit-scrollbar-track {
+    background: var(--dee-bg); /* 滚动条轨道的背景色 */
+}
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+    background: var(--blk-bg); /* 滑块的背景色 */
+    border-radius: 3px; /* 滑块的圆角 */
+}
+/* 滑块悬停状态 */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff; /* 滑块悬停时的背景色 */
+}
